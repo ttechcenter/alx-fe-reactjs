@@ -6,6 +6,7 @@ import './App.css'
 import Header from './Header';
 import MainContent from './MainContent';
 import Footer from './Footer';   
+import UserProfile from './components/UserProfile';
 
 
 
@@ -14,6 +15,11 @@ function App() {
 
   return (
     <>
+       <div className="App">
+      <UserProfile   
+ name="Alice" age="25" bio="Loves hiking and photography" />
+      {/* You can add more UserProfile components with different user data */}
+    </div>
       <div>
       <Header />
       <MainContent />
