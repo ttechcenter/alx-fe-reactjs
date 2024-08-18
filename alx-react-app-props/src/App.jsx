@@ -1,6 +1,6 @@
 import React from 'react';
 import ProfilePage from './ProfilePage';
-import UserContext, { UserProvider } from './UserContext'; // Assuming UserContext is in the same directory
+import UserContext, { UserProvider } from './UserContext';
 
 const userData = { name: "Jane Doe", email: "jane.doe@example.com" };
 
