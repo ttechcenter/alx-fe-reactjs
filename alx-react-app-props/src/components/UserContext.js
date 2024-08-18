@@ -1,6 +1,6 @@
 import React, { createContext, useState } from 'react';
 
-const UserContext = createContext(null);
+const UserContext = createContext();
 
 export const UserProvider = ({ children, userData }) => {
   const [user, setUser] = useState(userData);
@@ -12,4 +12,4 @@ export const UserProvider = ({ children, userData }) => {
   );
 };
 
-export default UserContext;
+export default UserContext; 
