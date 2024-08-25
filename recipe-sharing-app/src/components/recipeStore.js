@@ -16,7 +16,9 @@ const useRecipeStore = create((set) => ({
       state.favorites.includes(recipe.id) && Math.random() > 0.5
     );
     return { recommendations: recommended };
-  })),
+  }),
+  addRecipe: (newRecipe) => set((state) => ({ recipes: [...state.recipes, newRecipe] })),
+  setRecipes: (recipes) => set({ recipes }),
 }));
 
 export default useRecipeStore;
