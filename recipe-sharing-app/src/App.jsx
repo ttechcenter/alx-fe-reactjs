@@ -1,14 +1,23 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
-import RecipeList from './RecipeList';
-import AddRecipeForm from './AddRecipeForm';
-import RecipeDetails from './RecipeDetails';
+import RecipeList from './components/RecipeList';
+import AddRecipeForm from './components/AddRecipeForm';
+import RecipeDetails from './components/RecipeDetails';
+import SearchBar from './components/SearchBar';
+import { useRecipeStore } from './recipeStore';
 
 function App() {
+  const { filterRecipes } = useRecipeStore();
+
+  useEffect(() => {
+    filterRecipes();
+  }, []); // Trigger filtering on initial render
+
   return (
     <BrowserRouter>
       <div>
         <h1>Recipe Sharing App</h1>
+        <SearchBar />
         <AddRecipeForm />
         <RecipeList />
         <Routes>
